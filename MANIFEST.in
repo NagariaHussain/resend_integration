@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include resend_integration *.css
+recursive-include resend_integration *.csv
+recursive-include resend_integration *.html
+recursive-include resend_integration *.ico
+recursive-include resend_integration *.js
+recursive-include resend_integration *.json
+recursive-include resend_integration *.md
+recursive-include resend_integration *.png
+recursive-include resend_integration *.py
+recursive-include resend_integration *.svg
+recursive-include resend_integration *.txt
+recursive-exclude resend_integration *.pyc
