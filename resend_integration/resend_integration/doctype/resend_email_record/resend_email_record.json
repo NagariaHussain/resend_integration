@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-28 14:57:11.240736",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "status",
+  "to_emails",
+  "column_break_cmyx",
+  "from_email",
+  "reply_to",
+  "resend_id",
+  "section_break_qxfi",
+  "email_html",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nSent\nDelivered\nDelivery Delayed\nComplained\nBounced\nOpened",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reply_to",
+   "fieldtype": "Data",
+   "label": "Reply To"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Resend Email Record",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cmyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qxfi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "resend_id",
+   "fieldtype": "Data",
+   "label": "Resend ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "description": "Comma Separated List of Emails",
+   "fieldname": "to_emails",
+   "fieldtype": "Small Text",
+   "label": "To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_html",
+   "fieldtype": "HTML Editor",
+   "label": "Email HTML"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-28 16:31:10.346873",
+ "modified_by": "Administrator",
+ "module": "Resend Integration",
+ "name": "Resend Email Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
