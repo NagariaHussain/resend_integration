@@ -1,2 +1,3 @@
 # frappe -- https://github.com/frappe/frappe is installed via 'bench init'
 resend==0.5.1
+svix==1.5.0

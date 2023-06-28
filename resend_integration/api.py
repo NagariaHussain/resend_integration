@@ -1,4 +1,5 @@
 import frappe
+from svix.webhooks import Webhook, WebhookVerificationError
 
 EMAIL_STATUS_UPDATE_EVENTS = [
 	"sent",
@@ -12,7 +13,7 @@ EMAIL_STATUS_UPDATE_EVENTS = [
 @frappe.whitelist(allow_guest=True)
 def handle_resend_webhook():
 	data = frappe.form_dict
-	# verify_signing_secret()
+	verify_signing_secret()
 	entity, event = data.type.split(".")
 	
 	if entity == "email" and event in EMAIL_STATUS_UPDATE_EVENTS:
@@ -51,10 +52,17 @@ def send_email(subject, from_email=None, to_emails=[], email_html="", reply_to="
 
 def verify_signing_secret():
 	from frappe.utils.password import get_decrypted_password
-	signing_secret = get_decrypted_password("Resend Settings", "Resend Settings", "signing_secret")
+	payload = frappe.request.data
+	headers = frappe.request.headers
+	secret = get_decrypted_password("Resend Settings", "Resend Settings", "signing_secret")
+	
+	try:
+		wh = Webhook(secret)
+		wh.verify(payload, headers)
+	except WebhookVerificationError as e:
+		frappe.throw("Webhook Verification Failed")
 
-	if frappe.request.headers["Svix-Signature"] != signing_secret:
-		frappe.throw("Invalid signing secret.")
+	
 
 
 
