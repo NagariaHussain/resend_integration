@@ -14,6 +14,7 @@
   "from_email",
   "reply_to",
   "resend_id",
+  "broadcast",
   "section_break_qxfi",
   "email_html",
   "amended_from"
@@ -85,12 +86,18 @@
    "fieldname": "email_html",
    "fieldtype": "HTML Editor",
    "label": "Email HTML"
+  },
+  {
+   "fieldname": "broadcast",
+   "fieldtype": "Link",
+   "label": "Broadcast",
+   "options": "Resend Broadcast Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-28 16:31:10.346873",
+ "modified": "2023-06-30 16:34:29.468174",
  "modified_by": "Administrator",
  "module": "Resend Integration",
  "name": "Resend Email Record",
@@ -112,7 +119,12 @@
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Green",
+   "title": "Delivered"
+  }
+ ],
  "title_field": "subject",
  "track_changes": 1,
  "track_seen": 1,

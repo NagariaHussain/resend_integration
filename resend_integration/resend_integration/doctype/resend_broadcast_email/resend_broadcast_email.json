@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-30 16:27:18.200062",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "from_email",
+  "status",
+  "column_break_bkma",
+  "reply_to",
+  "recipients",
+  "section_break_gdoc",
+  "email_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bkma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reply_to",
+   "fieldtype": "Data",
+   "label": "Reply To"
+  },
+  {
+   "fieldname": "recipients",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Recipients ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_gdoc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "email_html",
+   "fieldtype": "HTML Editor",
+   "label": "Email HTML"
+  },
+  {
+   "default": "Not Sent",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Not Sent\nSent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Email",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Resend Email Record",
+   "link_fieldname": "broadcast"
+  }
+ ],
+ "modified": "2023-06-30 16:53:14.300928",
+ "modified_by": "Administrator",
+ "module": "Resend Integration",
+ "name": "Resend Broadcast Email",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Sent"
+  }
+ ],
+ "title_field": "subject"
+}
