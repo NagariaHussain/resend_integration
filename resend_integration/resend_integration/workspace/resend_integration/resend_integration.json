@@ -1,0 +1,49 @@
+{
+ "charts": [
+  {
+   "chart_name": "Email Count Per Day",
+   "label": "Emails Sent"
+  }
+ ],
+ "content": "[{\"id\":\"iQ7pEcY3LN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Resend Integration</span>\",\"col\":12}},{\"id\":\"6C69gGFKE1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Email Records\",\"col\":4}},{\"id\":\"_HtmXy8KNn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Broadcast Email\",\"col\":4}},{\"id\":\"VvsS_WiI0v\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"onr8vBkmne\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Emails Sent\",\"col\":12}}]",
+ "creation": "2023-06-30 16:59:51.642950",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "message-1",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Resend Integration",
+ "links": [],
+ "modified": "2023-06-30 17:03:57.904875",
+ "modified_by": "Administrator",
+ "module": "Resend Integration",
+ "name": "Resend Integration",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Email Records",
+   "link_to": "Resend Email Record",
+   "stats_filter": "{\"status\":[\"is\",\"set\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Broadcast Email",
+   "link_to": "Resend Broadcast Email",
+   "type": "DocType"
+  }
+ ],
+ "title": "Resend Integration"
+}
