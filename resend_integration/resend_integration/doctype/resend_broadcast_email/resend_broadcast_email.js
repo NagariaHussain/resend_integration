@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Resend Broadcast Email", {
     refresh(frm) {
-        if (frm.doc.status !== "Sent") {
+        if (frm.doc.status !== "Sent" && !frm.doc.__islocal) {
             const send_button = frm.add_custom_button("Send Emails", () => {
                 frm.call("send_emails").then(() => {
                     frm.msgprint("Emails sent successfully");
