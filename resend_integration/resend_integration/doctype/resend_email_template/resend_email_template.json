@@ -15,12 +15,14 @@
    "description": "Use <code>{{ }}</code> or <code>## ##</code> for templating variables",
    "fieldname": "template",
    "fieldtype": "HTML Editor",
-   "label": "Template"
+   "in_list_view": 1,
+   "label": "Template",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-27 22:21:52.632163",
+ "modified": "2023-08-27 22:43:49.678995",
  "modified_by": "Administrator",
  "module": "Resend Integration",
  "name": "Resend Email Template",
